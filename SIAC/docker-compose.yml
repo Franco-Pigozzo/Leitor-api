@@ -1,0 +1,13 @@
+version: "3"
+services:
+  tad:
+    image: postgres:9.6
+    container_name: "postgres"
+    environment:
+      - POSTGRES_DB=192.168.0.17
+      - POSTGRES_USER=admin
+      - TZ=admin
+    volumes:
+      - "./data/postgres:/var/lib/postgresql/data"
+    ports:
+      - 5452:5452
